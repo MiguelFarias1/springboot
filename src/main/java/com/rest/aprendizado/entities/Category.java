@@ -1,6 +1,8 @@
 package com.rest.aprendizado.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Category implements Serializable {
@@ -8,6 +10,8 @@ public class Category implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long id;
     private String name;
+
+    private List<Product> products = new ArrayList<>();
 
     public Category(){}
 
@@ -30,6 +34,10 @@ public class Category implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Product> getProducts() {
+        return products;
     }
 
     @Override
